@@ -34,7 +34,7 @@
 <deleteDRAM enabled="false"/>
 <maxDRAMSize enabled="false"/>
 <DRAMFile enabled="false"/>
-<socketName>azaid{{cookiecutter.stem_name}}</socketName>
+<socketName>{{cookiecutter.stem_name}}</socketName>
 <startStopScript enabled="false"/>
 <numberOfDevices>1</numberOfDevices>
 <ethernetOneEnabled enabled="false"/>
