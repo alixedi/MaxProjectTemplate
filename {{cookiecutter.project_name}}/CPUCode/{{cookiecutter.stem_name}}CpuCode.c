@@ -1,4 +1,4 @@
-{% if cookiecutter.slic_interface|lower == 'dynamic' %}
+{% if cookiecutter.slic|lower == 'dynamic' %}
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -44,7 +44,7 @@ int main(void)
         printf("Done.\n");
         return 0;
 }
-{% elif cookiecutter.slic_interface|lower == "advanced_static" %}
+{% elif cookiecutter.slic|lower == "advanced" %}
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,4 +1,4 @@
-{% if cookiecutter.manager_class|lower == "custom" %}
+{% if cookiecutter.manager|lower == "custom" %}
 package {{cookiecutter.stem_name|lower}};
 
 import com.maxeler.maxcompiler.v2.managers.BuildConfig;

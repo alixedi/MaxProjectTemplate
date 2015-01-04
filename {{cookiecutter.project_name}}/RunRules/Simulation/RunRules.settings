@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <buildProfile>
 <common>
-<boardModel type="VECTIS"/>
+<boardModel type="{{cookiecutter.dfe|upper}}"/>
 <simulation enabled="true"/>
 <enableMPCX enabled="{% if cookiecutter.optimize_for_mpcx %}true{% else %}false{% endif %}"/>
 </common>
@@ -11,7 +11,7 @@
 <mainClass>{{cookiecutter.stem_name|lower}}.{{cookiecutter.stem_name}}Manager</mainClass>
 <maxHeapSize>2</maxHeapSize>
 </runConfiguration>
-<selectEngineTarget enabled="false">VECTIS</selectEngineTarget>
+<selectEngineTarget enabled="false">{{cookiecutter.dfe|upper}}</selectEngineTarget>
 <overrideEnableMPCX enabled="false" value="false"/>
 </maxFile>
 </maxFiles>

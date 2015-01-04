@@ -62,7 +62,7 @@ include/{{cookiecutter.stem_name}}.h: maxfiles/{{cookiecutter.stem_name}}.h
 maxfiles/{{cookiecutter.stem_name}}.max maxfiles/{{cookiecutter.stem_name}}.h:
 # Ensure that maxfiles do not get build by this Makefile when running in MaxIDE
 ifndef MAXIDE_RUN
-	test -f $@ || env  MAX_BUILDPARAMS=" DFEModel=VECTIS  target=DFE  maxFileName={{cookiecutter.stem_name}} "  ant -v -f {{cookiecutter.stem_name}}.xml
+	test -f $@ || env  MAX_BUILDPARAMS=" DFEModel={{cookiecutter.dfe|upper}} target=DFE  maxFileName={{cookiecutter.stem_name}} "  ant -v -f {{cookiecutter.stem_name}}.xml
 else
 	test -f $@ || ( echo 'Maxfile unavailable: $@' >/dev/stderr ; exit 1 )
 endif
