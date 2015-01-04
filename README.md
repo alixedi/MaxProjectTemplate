@@ -7,13 +7,25 @@ This is a draft [cookiecutter](https://github.com/audreyr/cookiecutter) template
 Usage
 -----
 
-1. Install cookiecutter on your box:
+1. Install cookiecutter:
 
     $ sudo easy_install cookiecutter
 
 2. Go:
 
     $ cookiecutter https://github.com/alixedi/MaxProjectTemplate
+
+
+Tests
+-----
+
+1. Install nose:
+
+    $ sudo easy_install nose
+
+2. Run tests:
+
+    $ nosetests
 
 
 How to help
