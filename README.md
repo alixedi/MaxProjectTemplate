@@ -7,11 +7,11 @@ This is a draft [cookiecutter](https://github.com/audreyr/cookiecutter) template
 Usage
 -----
 
-1. Lets install cookiecutter on your box:
+1. Install cookiecutter on your box:
 
     $ sudo easy_install cookiecutter
 
-2. Have a go:
+2. Go:
 
     $ cookiecutter https://github.com/alixedi/MaxProjectTemplate
 
