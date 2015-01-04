@@ -1,0 +1,8 @@
+{
+    "project_name": "{{cookiecutter.project_name}}",
+    "stem_name": "{{cookiecutter.stem_name}}",
+    "runrule_name": "Simulation",
+    "simulation": true,
+    "dfe": "{{cookiecutter.dfe}}",
+    "program_arguments": ""
+}
