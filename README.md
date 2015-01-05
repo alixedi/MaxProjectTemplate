@@ -19,6 +19,8 @@ Usage
 Tests
 -----
 
+In order to run the test suite, you will have to be logged-in to MaxOS. If you are:
+
 1. Install nose:
 
     $ sudo easy_install nose
