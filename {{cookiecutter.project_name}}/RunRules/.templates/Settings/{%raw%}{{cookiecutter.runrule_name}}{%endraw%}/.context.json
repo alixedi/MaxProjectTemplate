@@ -1,0 +1,3 @@
+{
+{% for key, val in cookiecutter.iteritems() %}{{ key }}: "{{ val }}"{% if not loop.last %},{% endif %}
+{% endfor %}}
