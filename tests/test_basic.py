@@ -24,11 +24,15 @@ class TestBasic(unittest.TestCase):
 
     def setUp(self):
         call(['mkdir', TEST_DIR])
+        with cd(TEST_DIR):
+            cookiecutter('../', no_input=True)
 
     def test_basic(self):
         with cd(TEST_DIR):
-            cookiecutter('../', no_input=True)
             assert(os.path.isdir('./example_project'))
+            with cd(os.path.join('./example_project', 'RunRules', 'Simulation')):
+                exit_code = call(['make', 'build'])
+                assert(exit_code == 0)
 
     def tearDown(self):
         call(['rm', '-fr', TEST_DIR])
