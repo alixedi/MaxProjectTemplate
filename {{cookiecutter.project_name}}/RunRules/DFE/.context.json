@@ -1,6 +1,4 @@
 {
-    "project_name": "{{cookiecutter.project_name}}",
-    "stem_name": "{{cookiecutter.stem_name}}",
     "runrule_name": "DFE",
     "simulation": false,
     "dfe": "{{cookiecutter.dfe}}",

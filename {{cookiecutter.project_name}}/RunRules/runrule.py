@@ -35,8 +35,6 @@ if __name__ == '__main__':
 
     args = docopt(__doc__, version=VERSION)
 
-    print args
-
     with open('../.context.json') as f:
         context = json.load(f)
 
