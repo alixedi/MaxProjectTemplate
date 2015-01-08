@@ -23,6 +23,7 @@ Tests
 1. Clone repository:
 
 	$ git clone https://github.com/alixedi/MaxProjectTemplate
+	
 	$ cd MaxProjectTemplate
 
 2. Install dependencies:
