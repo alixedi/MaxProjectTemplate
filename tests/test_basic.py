@@ -18,9 +18,9 @@ class TestMake(unittest.TestCase):
 
     def test_make(self):
         """Fire off make build"""
-        with cd(TEST_DIR):
-            p = os.path.join('./example_project', 'RunRules', 'Simulation')
-            with cd(p):
+        with cd(os.path.join(TEST_DIR, 'my-project')):
+            call(['./manage.py', 'Sim'])
+            with cd(os.path.join('RunRules', 'Sim')):
                 exit = call(['make', 'build'])
                 assert(exit == 0)
 

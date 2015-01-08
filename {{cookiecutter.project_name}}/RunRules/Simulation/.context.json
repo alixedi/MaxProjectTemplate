@@ -1,6 +1,0 @@
-{
-    "runrule_name": "Simulation",
-    "simulation": true,
-    "dfe": "{{cookiecutter.dfe}}",
-    "program_arguments": ""
-}

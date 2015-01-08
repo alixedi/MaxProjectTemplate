@@ -1,8 +1,15 @@
 {
-    "project_name": "example_project",
-    "stem_name": "ExampleProject",
-    "manager": "standard",
-    "dfe": "vectis",
-    "slic": "basic"
+    "project_name": "my-project",
+    "dfe_model": "vectis",
+    "manager_class": "standard",
+    "optimize_for_mpcx": "false",
+    "stem_name": "MyProject",
+    "package_name": "{{ cookiecutter.stem_name | lower }}",
+    "kernel_name": "{{ cookiecutter.stem_name }}Kernel",
+    "parameters_name": "{{ cookiecutter.stem_name }}EngineParameters",
+    "manager_name": "{{ cookiecutter.stem_name }}Manager",
+    "maxfile_name": "{{ cookiecutter.stem_name }}",
+    "cpu_code_file": "{{ cookiecutter.stem_name }}CpuCode.c",
+    "slic_interface": "basic"
 }
 
