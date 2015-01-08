@@ -3,7 +3,6 @@ from cookiecutter.main import cookiecutter
 from cookiecutter.utils import work_in
 from os.path import dirname, realpath, join
 from os import pardir
-from cd import cd
 import unittest
 
 
@@ -25,7 +24,7 @@ class TestMake(unittest.TestCase):
         """Fire off make build"""
         with work_in(PROJECT):
             call(['./manage.py', 'Sim'])
-            with cd(join('RunRules', 'Sim')):
+            with work_in(join('RunRules', 'Sim')):
                 assert(call(['make', 'build']) == 0)
                 
     def tearDown(self):
