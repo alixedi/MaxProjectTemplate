@@ -11,9 +11,19 @@ Usage
 
     $ pip install -r https://raw.githubusercontent.com/alixedi/MaxProjectTemplate/master/requirements.txt
 
-2. Try it:
+2. Bootstrap a project:
 
     $ cookiecutter https://github.com/alixedi/MaxProjectTemplate
+
+3. Create a new RunRule:
+
+	$ cd <PROJECT_NAME>
+	$ ./manage.py Simulation
+
+4. Try compiling the project:
+
+	$ cd RunRules/Simulation
+	$ make build
 
 
 
@@ -23,7 +33,7 @@ Tests
 1. Clone repository:
 
 	$ git clone https://github.com/alixedi/MaxProjectTemplate
-	
+
 	$ cd MaxProjectTemplate
 
 2. Install dependencies:
