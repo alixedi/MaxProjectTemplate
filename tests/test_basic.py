@@ -1,32 +1,35 @@
 from subprocess import call
 from cookiecutter.main import cookiecutter
+from os.path import dirname, realpath, join
+from os import pardir
 from cd import cd
 import unittest
-import os
 
 
-TEST_DIR = '.temp'
+TEST = dirname(realpath(__file__))
+TMP = join(TEST, 'tmp')
+PROJECT = join(TMP, 'my-project')
+ROOT = join(TEST, pardir)
 
 
 class TestMake(unittest.TestCase):
 
     def setUp(self):
         """Bootstrap the project"""
-        call(['mkdir', TEST_DIR])
-        with cd(TEST_DIR):
-            cookiecutter('../', no_input=True)
+        call(['mkdir', TMP])
+        with cd(TMP):
+            cookiecutter(ROOT, no_input=True)
 
     def test_make(self):
         """Fire off make build"""
-        with cd(os.path.join(TEST_DIR, 'my-project')):
+        with cd(PROJECT):
             call(['./manage.py', 'Sim'])
-            with cd(os.path.join('RunRules', 'Sim')):
-                exit = call(['make', 'build'])
-                assert(exit == 0)
-
+            with cd(join('RunRules', 'Sim')):
+                assert(call(['make', 'build']) == 0)
+                
     def tearDown(self):
-        """Kill the temps"""
-        call(['rm', '-fr', TEST_DIR])
+        """Kill the temp"""
+        call(['rm', '-fr', TMP])
 
 if __name__ == '__main__':
     unittest.main()
