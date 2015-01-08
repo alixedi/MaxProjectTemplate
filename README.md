@@ -7,27 +7,32 @@ This is a draft [cookiecutter](https://github.com/audreyr/cookiecutter) template
 Usage
 -----
 
-1. Install cookiecutter:
+1. Install dependencies:
 
-    $ sudo easy_install cookiecutter
+    $ pip install -r https://raw.githubusercontent.com/alixedi/MaxProjectTemplate/master/requirements.txt
 
-2. Go:
+2. Try it:
 
     $ cookiecutter https://github.com/alixedi/MaxProjectTemplate
+
 
 
 Tests
 -----
 
-In order to run the test suite, you will have to be logged-in to MaxOS. If you are:
+1. Clone repository:
 
-1. Install nose:
+	$ git clone https://github.com/alixedi/MaxProjectTemplate
+	$ cd MaxProjectTemplate
 
-    $ sudo easy_install nose
+2. Install dependencies:
+
+    $ pip install -r requirements-test.txt
 
 2. Run tests:
 
     $ nosetests
+
 
 
 How to help
