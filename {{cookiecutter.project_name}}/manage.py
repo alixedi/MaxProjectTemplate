@@ -31,6 +31,7 @@ from os.path import join, abspath, dirname, realpath, isdir
 from os import getcwd, chdir
 
 from cookiecutter.main import cookiecutter
+from cookiecutter.utils import work_in
 from jinja2 import Environment, FileSystemLoader
 
 import xmltodict
@@ -50,19 +51,6 @@ SETTINGS_TEMPLATE = join(RUNRULE_TEMPLATE_DIR, 'Settings')
 # Project paths
 CONTEXT = join(PROJECT_ROOT, '.context.json')
 RUNRULES_DIR = join(PROJECT_ROOT, 'RunRules')
-
-
-class cd:
-    """Context manager for changing the current working directory"""
-    def __init__(self, newPath):
-        self.newPath = newPath
-
-    def __enter__(self):
-        self.savedPath = getcwd()
-        chdir(self.newPath)
-
-    def __exit__(self, etype, value, traceback):
-        chdir(self.savedPath)
 
 
 if __name__ == '__main__':
@@ -96,7 +84,7 @@ if __name__ == '__main__':
             tpl = abspath(args['template'])
 
         # Launch cookiecutter
-        with cd(RUNRULES_DIR):
+        with work_in(RUNRULES_DIR):
             cookiecutter(tpl, no_input=True, extra_context=context)
     
     # Now that the RunRule has been created, lets bootstrap Makefile.rules
