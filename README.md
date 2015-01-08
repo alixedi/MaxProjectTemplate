@@ -18,13 +18,28 @@ Usage
 3. Create a new RunRule:
 
 	$ cd <PROJECT_NAME>
+
 	$ ./manage.py Simulation
 
 4. Try compiling the project:
 
 	$ cd RunRules/Simulation
+
 	$ make build
 
+5. Edit RunRule:
+
+	$ vim RunRules.settings
+
+6. Re-generate the Makefile:
+
+	$ ../../manage.py ../Simulation
+
+7. Try compiling again with new settings:
+
+	$ cd RunRules/Simulation
+
+	$ make build
 
 
 Tests
