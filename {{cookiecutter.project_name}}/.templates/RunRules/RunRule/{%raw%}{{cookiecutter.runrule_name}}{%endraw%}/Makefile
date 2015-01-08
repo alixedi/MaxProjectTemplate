@@ -1,5 +1,4 @@
-{% raw %}
-ifndef MAXCOMPILERDIR
+{% raw %}ifndef MAXCOMPILERDIR
   $(error The environment variable MAXCOMPILERDIR is not defined)
 endif
 
@@ -25,5 +24,4 @@ Makefile.rules: Makefile.settings
 Makefile.settings: RunRules.settings
 	java -jar "$(MAXCOMPILERDIR)/lib/MaxIDE/projectAdmin.jar" -u ../.. {{ cookiecutter.runrule_name }}
 
-.PHONY: all build clean installer_no_dependencies
-{% endraw %}
+.PHONY: all build clean installer_no_dependencies{% endraw %}

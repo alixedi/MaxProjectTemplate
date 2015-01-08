@@ -1,5 +1,4 @@
-{% raw %}
-#
+{% raw %}#
 # This is generated automatically by $MAXCOMPILERDIR/lib/MaxIDE/projectAdmin.jar every time 
 # RunRule.settings is updated.  Changes to this files are likely to be lost.
 #
@@ -100,5 +99,4 @@ clean-installers:
            $(patsubst %.max,maxfiles/%.h, $(RUNRULE_MAXFILES))   \
            $(patsubst %.max,include/%.h, $(RUNRULE_MAXFILES))
 
-.PHONY: startsim stopsim build clean maxfiles clean-dist clean-objects clean-maxfiles clean-installers
-{% endraw %}
+.PHONY: startsim stopsim build clean maxfiles clean-dist clean-objects clean-maxfiles clean-installers{% endraw %}

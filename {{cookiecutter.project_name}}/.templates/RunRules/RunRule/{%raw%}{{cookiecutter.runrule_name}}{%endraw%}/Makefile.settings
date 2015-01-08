@@ -1,5 +1,4 @@
-{% raw %}
-# --- User's custom definitions
+{% raw %}# --- User's custom definitions
 
 # ---
 
@@ -13,5 +12,4 @@ RUNRULE_CFLAGS      :=
 RUNRULE_LDFLAGS     := 
 
 TARGET_EXEC         := {{cookiecutter.maxfile_name}}
-TARGET_LIBRARY      := 
-{% endraw %}
+TARGET_LIBRARY      := {% endraw %}
