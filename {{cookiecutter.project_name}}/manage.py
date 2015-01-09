@@ -10,18 +10,21 @@ Usage:
     manage.py <runrule> [--template=<PATH>] [--params=<JSON> | <params>...]
 
 Arguments:
-    <runrule>           Specify RulRule if you want to update. 
-    <params>            Specify input parameters to be passed to the cookiecutter
-                        template on the CLI.
+    <runrule>           Specify name of the RulRule. If it does not exist, it
+                        will be created. If it already exists, it will be 
+                        updated.
+    <params>            Specify input parameters for creating or updating
+                        the RunRule as command-line arguments.
 
 Options:
     -h --help           Print this page.
     -v --version        Print the version.
-    --template=<PATH>   Specify path to a cookiecutter template. The 
-                        cookiecutter template may be a local folder as well 
-                        as a GitHub or BitBucket repository.
-    --params=<JSON>     Specify input parameters to be passed to the 
-                        cookiecutter template in a JSON file.
+    --template=<PATH>   Specify cookiecutter template to use for creating or
+                        updating the RunRule. The cookiecutter template may 
+                        be a local folder or a GitHub repository.
+    --params=<JSON>     Specify input parameters for creating or updating
+                        the RunRule as a file argument. Currently, only JSON
+                        files are accepted.
 """
 
 
